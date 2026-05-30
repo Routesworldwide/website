@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
               </tr>
               <tr style="border-bottom: 1px solid #e5e7eb;">
                 <td style="padding: 8px 0; font-weight: bold; color: #374151;">Dimensions:</td>
-                <td style="padding: 8px 0; color: #374151;">${dimensions || 'N/A'}</td>
+                <td style="padding: 8px 0; color: #374151;">${dimensions ? `${dimensions} cm` : 'N/A'}</td>
               </tr>
               <tr style="border-bottom: 1px solid #e5e7eb;">
                 <td style="padding: 8px 0; font-weight: bold; color: #374151;">Shipping Date:</td>

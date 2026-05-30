@@ -111,38 +111,38 @@ export default function QuotePage() {
     return (
         <main className="min-h-screen">
             {/* Hero Section */}
-         <section className="relative h-screen px-6 sm:px-8 flex items-center justify-center overflow-hidden">
+            <section className="relative h-screen px-6 sm:px-8 flex items-center justify-center overflow-hidden">
 
-    {/* Background Image */}
-    <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1700716465891-9e5e9f501d7d?q=80&w=1193&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-        }}
-    />
+                {/* Background Image */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                        backgroundImage: "url('https://images.unsplash.com/photo-1700716465891-9e5e9f501d7d?q=80&w=1193&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                    }}
+                />
 
-    {/* Blue Gradient Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-br from-blue-950/50 via-blue-900/70 to-blue-950/75" />
+                {/* Blue Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-950/50 via-blue-900/70 to-blue-950/75" />
 
-    {/* Existing Decorative Blurs */}
-    <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-96 bg-red-500/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl" />
-    </div>
+                {/* Existing Decorative Blurs */}
+                <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute -top-40 -right-40 w-80 h-96 bg-red-500/10 rounded-full blur-3xl" />
+                    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl" />
+                </div>
 
-    <div className="relative mx-auto max-w-7xl text-center">
-        <div>
-            <h1 className="text-5xl sm:text-6xl lg:text-8xl mb-6 font-[manrope] text-white">
-                Get Your Shipping Quote
-            </h1>
+                <div className="relative mx-auto max-w-7xl text-center">
+                    <div>
+                        <h1 className="text-5xl sm:text-6xl lg:text-8xl mb-6 font-[manrope] text-white">
+                            Get Your Shipping Quote
+                        </h1>
 
-            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                Instantly compare shipping rates and options for your cargo.
-                Fast, transparent, and tailored to your needs.
-            </p>
-        </div>
-    </div>
-</section>
+                        <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                            Instantly compare shipping rates and options for your cargo.
+                            Fast, transparent, and tailored to your needs.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
             {/* Quote Form Section */}
             <section className="py-20 px-6 sm:px-8 bg-white">
