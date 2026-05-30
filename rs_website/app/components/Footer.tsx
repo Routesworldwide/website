@@ -21,7 +21,7 @@ export default function Footer() {
     },
     {
       name: "WhatsApp",
-      href: "https://wa.me/8796200495",
+    href: "https://wa.me/918796200495?text=Hello%20Routes%20Worldwide%20Express",
       icon: "/icons/whatsapp.png",
     }
   ];
