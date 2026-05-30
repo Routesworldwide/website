@@ -544,7 +544,8 @@ export default function PartnersSection() {
             Partners with Routes Worldwide Express
           </h2>
           <p className="text-xs sm:text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
-            Unsere Ziele sind ehrgeizig und können nur in Partnerschaft mit anderen erreicht werden. Wir arbeiten mit einer Reihe von Technologiepartnern zusammen, die uns dabei helfen, Veränderungen für Kinder auf globaler Ebene zu erreichen.
+     We work with trusted logistics partners, carriers, and industry leaders to provide reliable and efficient shipping solutions. These strong partnerships help us expand our global reach, ensure smooth operations, and deliver exceptional service to our customers every step of the way.
+
           </p>
         </header>
 

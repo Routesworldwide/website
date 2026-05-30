@@ -233,15 +233,11 @@ export default function Footer() {
 
               <div className="flex flex-wrap items-center gap-8">
 
-                <a href="#" className="transition hover:text-white">
+                <a href="/privacy-policy" className="transition hover:text-white">
                   Privacy Policy
                 </a>
 
-                <a href="#" className="transition hover:text-white">
-                  Terms of Service
-                </a>
-
-                <a href="#" className="transition hover:text-white">
+                <a href="/shipping-policy" className="transition hover:text-white">
                   Shipping Policy
                 </a>
 

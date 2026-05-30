@@ -119,22 +119,11 @@ export default function AboutPage() {
               </h2>
 
               <p className="mt-6 text-sm leading-5 text-gray-600">
-                We provide smart and dependable logistics services that help
-                businesses streamline transportation, improve supply chain
-                efficiency, and move freight confidently across the globe.lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque?
+                At Routes Worldwide Express, we are committed to providing dependable logistics and transportation solutions that help businesses move goods efficiently across domestic and international markets. With a strong focus on reliability, speed, and customer satisfaction, we work closely with our clients to understand their unique shipping requirements and deliver tailored solutions that support their growth.
               </p>
 
               <p className="mt-5 text-sm leading-5 text-gray-600">
-                Our team combines operational expertise, modern tracking
-                systems, and strong international partnerships to deliver
-                seamless freight solutions tailored to every client.lorem300
-                ipsum dolor sit amet consectetur adipisicing and strong international partnerships to deliver
-                seamless freight solutions tailored to every client.lorem300
-                ipsum dolor sit amet consectetur adipisicing and strong international partnerships to deliver
-                seamless freight solutions tailored to every client.lorem300
-                ipsum dolor sit amet consectetur adipisicing and strong international partnerships to deliver
-                seamless freight solutions tailored to every client.lorem300
-                ipsum dolor sit amet consectetur adipisicing
+               Our comprehensive range of logistics services includes air freight, sea freight, road transportation, warehousing, and supply chain management. Backed by an experienced team and a trusted global network, we ensure that every shipment is handled with care, precision, and complete transparency. We continuously invest in technology and operational excellence to provide real-time visibility, streamlined processes, and cost-effective logistics solutions. Whether serving small businesses or large enterprises, our goal is to simplify transportation challenges and become a trusted logistics partner that businesses can rely on for long-term success.
               </p>
 
               <div className="mt-10 grid grid-cols-2 gap-6 text-center">
