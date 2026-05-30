@@ -18,6 +18,11 @@ export default function Footer() {
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/routesworldwide-express-ab1854411?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
       icon: "/icons/linkedin.png",
+    },
+    {
+      name: "WhatsApp",
+      href: "https://wa.me/8796200495",
+      icon: "/icons/whatsapp.png",
     }
   ];
 

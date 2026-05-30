@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const navLinks = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
+  // { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -71,7 +71,7 @@ export default function Header() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="/contact"
+            href="/quote"
             className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
           >
             Get a quote
@@ -90,7 +90,7 @@ export default function Header() {
           aria-expanded={isMenuOpen}
           aria-label="Toggle navigation menu"
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:border-slate-300 hover:text-slate-950 md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full   text-slate-700 transition hover:border-slate-300 hover:text-slate-950 md:hidden"
         >
           <span className="sr-only">Menu</span>
 
@@ -126,7 +126,7 @@ export default function Header() {
 
           <div className="mt-5 flex flex-col gap-3">
             <a
-              href="/contact"
+              href="/quote"
               className="rounded-full border border-slate-300 bg-white px-4 py-3 text-center text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
             >
               Get a quote

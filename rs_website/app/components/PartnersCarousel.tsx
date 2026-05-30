@@ -484,23 +484,15 @@ function CenterLogoHex() {
       />
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center">
-        {/* Glow behind letter 'g' */}
+        {/* Glow behind logo */}
         <div className="absolute w-12 h-12 bg-indigo-500/20 rounded-full blur-xl pointer-events-none" />
         
-        {/* Colorful custom vector representing the modern "G" brand icon */}
-        <svg width="68" height="68" viewBox="0 0 100 100" className="drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]">
-          <defs>
-            <linearGradient id="ezyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#818cf8" />
-              <stop offset="50%" stopColor="#6366f1" />
-              <stop offset="100%" stopColor="#f97316" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M50 15c-19.3 0-35 15.7-35 35s15.7 35 35 35c13.2 0 24.6-7.3 30.6-18.1l-10.4-5.2C66.1 68 58.7 72 50 72c-12.1 0-22-9.9-22-22s9.9-22 22-22c8.2 0 15.3 4.5 19.1 11.2l10.3-5.3C73.4 22.8 62.6 15 50 15zm14.3 35H50v8h22.3v-8H64.3z"
-            fill="url(#ezyGrad)"
-          />
-        </svg>
+        {/* Company Logo */}
+        <img
+          src="logonobg.png"
+          alt="Routes Worldwide Express"
+          className="relative z-10 h-20 w-20 sm:h-44 sm:w-44 object-contain drop-shadow-[0_0_15px_rgba(99,102,241,0.5)]"
+        />
       </div>
     </div>
   );

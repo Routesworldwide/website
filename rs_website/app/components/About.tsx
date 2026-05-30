@@ -58,8 +58,7 @@ export default function AboutPage() {
               Global Freight Solutions
             </p> */}
 
-            <h1 className="mt-6 text-4xl font-semibold leading-tight font-[manrope] text-white  sm:text-5xl lg:text-6xl">
-              Delivering seamless
+            <h1 className="mt-6 text-4xl  leading-tight font-[manrope] text-white  sm:text-5xl lg:text-8xl">
                worldwide freight 
               solutions
             </h1>

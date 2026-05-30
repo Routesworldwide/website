@@ -63,10 +63,10 @@ export default function ServicesSection() {
         </div>
 
         {/* Main Two Blocks */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
           {/* LEFT IMAGE BLOCK */}
-          <div className="sticky top-24 h-[700px] overflow-hidden rounded bg-slate-100 ">
+          <div className="h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden rounded bg-slate-100">
 
             {/* Main Image */}
             <div className="relative h-[78%] w-full">
@@ -92,7 +92,7 @@ export default function ServicesSection() {
           </div>
 
           {/* RIGHT SCROLLABLE SERVICES */}
-          <div className="h-[700px] overflow-y-auto pr-2 space-y-6">
+          <div className="h-auto lg:h-[700px] lg:overflow-y-auto pr-2 space-y-6">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -244,31 +244,31 @@ export default function ServicesSection() {
 
             {/* RIGHT IMAGE BLOCK */}
             <div className="lg:sticky lg:top-24">
-              <div className="overflow-hidden border border-slate-200 bg-white shadow-sm">
+              <div className="overflow-hidden  bg-white ">
 
-                <div className="grid gap-4">
+                <div className="grid gap-10">
                   <div className="relative h-[300px] w-full">
                     <img
-                      src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1974&auto=format&fit=crop"
+                      src="https://plus.unsplash.com/premium_vector-1723266253608-85a7f5251b26?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="Logistics Industry"
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div className="relative h-[220px] w-full">
                       <img
-                        src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=1200&auto=format&fit=crop"
+                        src="https://images.unsplash.com/vector-1768383602501-13a9af1e189a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Warehouse operations"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-coqntain"
                       />
                     </div>
 
                     <div className="relative h-[220px] w-full">
                       <img
-                        src="https://images.unsplash.com/photo-1529253355930-8e0f54b7d054?q=80&w=1200&auto=format&fit=crop"
+                        src="https://images.unsplash.com/vector-1775025870130-4ca0025bf900?q=80&w=1078&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Delivery fleet"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-contain"
                       />
                     </div>
                   </div>

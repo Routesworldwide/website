@@ -1,6 +1,6 @@
 export default function CTASection() {
   return (
-    <section className=" bg-white">
+    <section className=" bg-white mb-30">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* CTA Container */}
@@ -14,29 +14,35 @@ export default function CTASection() {
           <div className="relative z-10 flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
 
             {/* Left Content */}
-            <div className="max-w-3xl">
+            <div className="max-w-5xl">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-red-300">
                 Ready to Ship?
               </p>
 
-              <h2 className="mt-5 text-4xl md:text-5xl font-semibold font-[manrope] leading-tight text-white">
+              <h2 className="mt-5 text-4xl md:text-5xl  font-[manrope] leading-tight text-white">
                 Let’s move your cargo with speed and reliability
               </h2>
 
-              <p className="mt-6 text-lg leading-8 text-slate-300">
-                From global freight forwarding to warehousing and customs
-                clearance, we provide end-to-end logistics solutions tailored
-                for modern businesses.
-              </p>
-            </div>
+              <div className="mt-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+  <p className="text-lg leading-8 text-slate-300 max-w-3xl">
+    From global freight forwarding to warehousing and customs
+    clearance, we provide end-to-end logistics solutions tailored
+    for modern businesses.
+  </p>
 
-            {/* Buttons */}
-          <div className="flex lg:min-h-full lg:items-end lg:justify-end">
-  <a href="/contact" className="inline-block rounded-xl border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition-all duration-300 hover:bg-white hover:text-slate-900">
+<div className="w-full lg:w-[270px] flex-shrink-0">
+  <a
+    href="/contact"
+    className="inline-block w-full rounded border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur transition-all duration-300 hover:bg-white hover:text-slate-900 text-center"
+  >
     Contact Us
   </a>
 </div>
+</div>
+            </div>
           </div>
+
+
         </div>
       </div>
     </section>
