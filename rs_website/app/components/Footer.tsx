@@ -142,31 +142,23 @@ export default function Footer() {
               <ul className="mt-8 space-y-5 text-gray-400">
 
                 <li>
-                  <a href="#" className="transition hover:text-white">
+                  <a href="/about" className="transition hover:text-white">
                     About Us
                   </a>
                 </li>
 
-                <li>
-                  <a href="#" className="transition hover:text-white">
-                    Our Network
-                  </a>
-                </li>
+             
+
+              
 
                 <li>
-                  <a href="#" className="transition hover:text-white">
-                    Careers
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="transition hover:text-white">
+                  <a href="/blog" className="transition hover:text-white">
                     Blog
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="transition hover:text-white">
+                  <a href="/contact" className="transition hover:text-white">
                     Contact
                   </a>
                 </li>
@@ -215,7 +207,7 @@ export default function Footer() {
                     href="mailto:routesworldwide@gmail.com"
                     className="mt-3 block transition hover:text-white"
                   >
-                    routesworldwide@gmail.com
+                    routesworldwideexpress@gmail.com
                   </a>
                 </div>
 

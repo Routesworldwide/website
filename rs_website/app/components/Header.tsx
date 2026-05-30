@@ -34,9 +34,9 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8">
         <a href="/" className="flex items-center gap-3">
-          <div className="relative h-12 w-12 overflow-hidden rounded-2xl">
+          <div className="relative h-14 w-14 overflow-hidden rounded-full">
             <Image
-              src="/logo.png"
+              src="/logo_gif.gif"
               alt="Routes Worldwide logo"
               fill
               className="object-cover"

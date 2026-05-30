@@ -67,7 +67,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="min-h-screen  p-8 md:p-16 flex items-center justify-center">
+        <div className="min-h-screen  p-3 md:p-16 flex items-center justify-center">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl w-full">
         {services.map((service, index) => {
           const IconComponent = service.icon;

@@ -7,7 +7,7 @@ const achievements = [
 
 export default function Achievement() {
   return (
-    <section className="bg-white py-16 sm:py-20 my-22 ">
+    <section className="bg-white  sm:py-20 my-22 ">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
         <div className="mx-auto mb-10 max-w-6xl text-center">
        

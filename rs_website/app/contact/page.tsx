@@ -7,19 +7,19 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    value: "+1 (555) 123-4567",
-    description: "Mon-Fri, 9AM-6PM EST",
+    value: "8796200495",
+    description: "Mon-Sun, 9AM-6PM EST",
   },
   {
     icon: Mail,
     title: "Email",
-    value: "support@routesworldwide.com",
+    value: "routesworldwideexpress@gmail.com",
     description: "We'll respond within 24 hours",
   },
   {
     icon: MapPin,
     title: "Headquarters",
-    value: "123 Logistics Avenue, New York, NY 10001",
+    value: "OFFICE 1016/2 BEEGREEN PLAZA. 2ND FLOOR, MAHIPALPUR, NEW DELHI SOUTH WEST DELHI-110037",
     description: "Visit us for in-person consultation",
   },
   {
@@ -40,6 +40,8 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -49,16 +51,41 @@ export default function ContactPage() {
       ...prev,
       [name]: value,
     }));
+    setError("");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setSubmitted(true);
-    setTimeout(() => {
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSubmitted(true);
       setFormData({ name: "", email: "", phone: "", company: "", message: "" });
-      setSubmitted(false);
-    }, 3000);
+
+      // Reset success message after 3 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An error occurred");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -268,11 +295,26 @@ export default function ContactPage() {
             />
           </div>
 
+          {error && (
+            <div className="p-4 bg-red-50 border border-red-200 text-red-700 rounded text-sm">
+              {error}
+            </div>
+          )}
+
+          {submitted && (
+            <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded text-sm">
+              Thank you! Your message has been sent successfully. We'll get back to you soon.
+            </div>
+          )}
+
           <button
             type="submit"
-            className="w-full bg-blue-950 hover:bg-neutral-800 text-white font-semibold border border-b-3 border-black py-4 px-6 transition-all duration-300 flex items-center justify-center gap-2 group"
+            disabled={loading || submitted}
+            className="w-full bg-blue-950 hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold border border-b-3 border-black py-4 px-6 transition-all duration-300 flex items-center justify-center gap-2 group"
           >
-            {submitted ? (
+            {loading ? (
+              <span>Sending...</span>
+            ) : submitted ? (
               <span>Message Sent!</span>
             ) : (
               <>

@@ -432,9 +432,9 @@ const RIGHT_PARTNERS: Partner[] = [
 const HEX_CLIP = "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
 
 // Layout sizing configs matching the original pixel aspect ratios
-const HEX_W = 114;
-const HEX_H = 126;
-const GAP_X = 18;
+const HEX_W = 124;
+const HEX_H = 146;
+const GAP_X = 44;
 const GAP_Y = -18; // Negative gap merges them nicely into honeycomb joints
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
@@ -455,7 +455,7 @@ function HexBadge({ partner }: { partner: Partner }) {
     >
       {/* Hex Inner Frame Design */}
       <div className="absolute inset-[2px] bg-white" style={{ clipPath: HEX_CLIP }} />
-      <div className="relative z-10 flex flex-col items-center justify-center p-2 text-center">
+      <div className="hex-icon-inner relative z-10 flex flex-col items-center justify-center p-2 text-center">
         {partner.icon}
       </div>
     </div>
@@ -511,14 +511,18 @@ function CenterLogoHex() {
 export default function PartnersSection() {
   return (
     <section 
-      className="relative py-24 bg-gradient-to-b from-slate-50 to-slate-100 overflow-hidden font-sans flex flex-col items-center justify-center min-h-screen"
+      className="relative py-8 md:py-24 pb-4 md:pb-24 bg-gradient-to-b from-blue-100 to-blue-300 overflow-hidden font-sans flex flex-col items-center justify-center"
       data-partners-v2=""
     >
       {/* Global CSS scope containing clean dynamic scaling matrix */}
       <style>{`
         @media (max-width: 639px) {
           [data-partners-v2] .honeycomb-wrapper {
-            transform: scale(0.48);
+            transform: scale(0.36);
+            padding: 0;
+          }
+          [data-partners-v2] .hex-icon-inner {
+            transform: scale(1.8);
           }
         }
         @media (min-width: 640px) and (max-width: 1023px) {
@@ -540,7 +544,7 @@ export default function PartnersSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Header content EXACTLY matched with image */}
-        <header className="text-center mb-16 max-w-4xl mx-auto">
+        <header className="text-center mb sm:mb-8 max-w-4xl mx-auto px-4">
           <p className="text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] text-red-600 mb-3">
               Partners & Technologies
           </p>
@@ -553,7 +557,7 @@ export default function PartnersSection() {
         </header>
 
         {/* Honeycomb grid workspace centerizer wrapper */}
-        <div className="w-full flex justify-center py-10 min-h-[460px]">
+        <div className="w-full flex justify-center overflow-hidden mt-0 md:mt-20">
           <div className="honeycomb-wrapper flex items-center justify-center origin-center transition-transform duration-300">
             
             {/* ─── LEFT WING (9 Hexagons staggered) ─── */}

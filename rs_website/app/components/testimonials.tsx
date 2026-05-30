@@ -4,7 +4,7 @@ const testimonials = [
   {
     quote:
       "Having a reliable freight partner makes planning and managing logistics so much easier. If you want that full partnership experience, go with GlobalFreight.",
-    name: "Ellen Ouellette",
+    name: "Manish Jain",
     role: "Operations Manager",
     company: "AspenTech",
     avatar: "EO",
@@ -20,7 +20,7 @@ const testimonials = [
   {
     quote:
       "Everything we've seen from this logistics team has been the awesome piece we needed to streamline our supply chain. It's reliability with a purpose.",
-    name: "Kelsey Wind",
+    name: "Sandeep kedia",
     role: "Deputy Director of Logistics",
     company: "CMP Group",
     avatar: "KW",
@@ -36,7 +36,7 @@ const testimonials = [
   {
     quote:
       "GlobalFreight is simple, easy to work with, and gives us all the features we need. It just works.",
-    name: "Alexis Fillon",
+    name: "Rohan Raj",
     role: "Senior Growth Manager",
     company: "Piano",
     avatar: "AF",
@@ -52,7 +52,7 @@ const testimonials = [
   {
     quote:
       "The smart tracking and real-time updates were amazing. Our team talked about it long after the delivery. It was a great experience — very memorable.",
-    name: "Matthias Gutzman",
+    name: "vineeta Tripathi",
     role: "Founder and CEO",
     company: "DPW",
     avatar: "MG",
@@ -68,7 +68,7 @@ const testimonials = [
   {
     quote:
       "We've never worked with a more helpful, solution-oriented freight partner — ever. I have some great ideas for future collaborations.",
-    name: "Stephanie Kelch",
+    name: "Govind Sethi",
     role: "Senior Manager, Global Events",
     company: "HubSpot",
     avatar: "SK",
