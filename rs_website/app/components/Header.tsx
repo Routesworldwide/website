@@ -56,7 +56,7 @@ export default function Header() {
 
         <nav
           aria-label="Primary navigation"
-          className="hidden items-center gap-8 rounded-3xl bg-white/50 p-3 px-7 md:flex"
+          className="hidden items-center gap-8 rounded-3xl bg-white p-3 px-7 md:flex"
         >
           {navLinks.map((link) => (
             <a
@@ -69,19 +69,33 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-5 md:flex px-5 bg-white rounded-3xl py-1">
+          <a
+            href="/customs-estimator"
+            className="rounded-full  py-2 text-sm font-medium text-slate-700 transition "
+          >
+            Customs Estimator
+          </a>
+
+          <a
+            href="/check-documents"
+            className="rounded-full  py-2 text-sm font-medium text-slate-700 transition "
+          >
+            Check Documents
+          </a>
+
           <a
             href="/quote"
-            className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+            className="rounded-full py-2 text-sm font-medium text-slate-700 transition "
           >
-            Get a quote
+            Get a Quote
           </a>
 
           <a
             href="/track"
-            className="rounded-full bg-blue-950 px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#122f63]"
+            className="rounded-full  px-5 py-2 text-sm font-semibold transition "
           >
-            Track shipment
+            Track Shipment
           </a>
         </div>
 
@@ -122,19 +136,31 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-          </div>
 
-          <div className="mt-5 flex flex-col gap-3">
+            <a
+              href="/customs-estimator"
+              className="text-sm font-medium text-slate-700 transition hover:text-[#0f2746]"
+            >
+              Customs Estimator
+            </a>
+
+            <a
+              href="/check-documents"
+              className="text-sm font-medium text-slate-700 transition hover:text-[#0f2746]"
+            >
+              aCheck Documents
+            </a>
+
             <a
               href="/quote"
-              className="rounded-full border border-slate-300 bg-white px-4 py-3 text-center text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+              className="text-sm font-medium text-slate-700 transition hover:text-[#0f2746]"
             >
               Get a quote
             </a>
 
             <a
               href="/track"
-              className="rounded-full bg-[#0f2746] px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#122f63]"
+              className="text-sm font-medium text-slate-700 transition hover:text-[#0f2746]"
             >
               Track shipment
             </a>

@@ -11,7 +11,7 @@ export default function Achievement() {
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
         <div className="mx-auto mb-10 max-w-6xl text-center">
        
-          <h2 className="mt-4 text-3xl font-semibold tracking-normal  text-slate-950 sm:text-5xl font-[manrope]">
+          <h2 className="mt-4 text-3xl font-semibold tracking-normal  text-slate-950 sm:text-4xl ">
             Trusted Logistics Performance, Built For Every Route.
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">

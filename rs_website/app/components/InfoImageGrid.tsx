@@ -21,7 +21,7 @@ export default function InfoImageGrid() {
                 Logistics Intelligence
               </span> */}
               
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold font-[manrope] tracking-tight text-slate-950 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold  tracking-tight text-slate-950 leading-tight">
                 Powerful logistics designed around your business
               </h2>
               

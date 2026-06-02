@@ -11,32 +11,27 @@ const services = [
   {
     title: "Sea Freight",
     description:
-      "Reliable ocean freight services with optimized shipping routes and cost-effective container solutions.",
+      "Reliable ocean freight services with optimized shipping routes and cost-effective container solutions globally.",
   },
   {
-    title: "Road Freight",
+    title: "Express Courier",
     description:
-      "Efficient domestic and cross-border road transport with real-time tracking and secure handling.",
+      "Rapid delivery services for urgent packages with guaranteed timely arrival and comprehensive tracking.",
   },
   {
-    title: "Rail Freight",
+    title: "Customs Clearance",
     description:
-      "Sustainable and dependable rail logistics for bulk cargo and long-distance transportation.",
+      "Smooth customs documentation and clearance services for hassle-free international shipping and compliance.",
   },
   {
-    title: "Warehousing",
+    title: "Commercial Cargo",
     description:
-      "Modern storage facilities with inventory management, packaging, and distribution support.",
+      "Comprehensive freight solutions for businesses with specialized handling and logistics support for industrial shipments.",
   },
   {
-    title: "Custom Clearance",
+    title: "Personal Shipments",
     description:
-      "Smooth customs documentation and clearance services for hassle-free international shipping.",
-  },
-  {
-    title: "International Couriers",
-    description:
-      "Express worldwide courier delivery solutions for businesses and personal shipments.",
+      "Secure and reliable delivery services for individual parcels and personal items with end-to-end tracking.",
   },
 ];
 
@@ -51,7 +46,7 @@ export default function ServicesSection() {
             Our Services
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-semibold font-[manrope]  text-slate-900">
+          <h2 className="mt-4 text-4xl md:text-4xl font-semibold  text-slate-900">
             End-to-end logistics solutions built for modern businesses
           </h2>
 
@@ -154,7 +149,7 @@ export default function ServicesSection() {
                   Industries We Serve
                 </p>
 
-                <h2 className="mt-4 text-4xl md:text-5xl font-semibold font-[manrope] leading-tight text-slate-900">
+                <h2 className="mt-4 text-4xl font-semibold leading-tight text-slate-900">
                   Logistics solutions tailored for every industry
                 </h2>
 

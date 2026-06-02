@@ -79,7 +79,7 @@ export default function TruckRevealSection() {
                 Global Freight Solutions
               </p>
 
-              <h2 className="font-[manrope] text-xl font-semibold leading-tight tracking-tight text-gray-900 xs:text-2xl sm:text-3xl lg:text-[3.2rem]">
+              <h2 className=" text-xl font-semibold leading-tight tracking-tight text-gray-900 xs:text-2xl sm:text-4xl ">
                 Delivering Worldwide Logistics With{" "}
                 <span className="text-[#c8102e]">
                   Seamless Precision & Care

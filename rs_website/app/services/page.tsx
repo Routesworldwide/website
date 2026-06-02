@@ -18,7 +18,7 @@ export default function ServicesPage() {
         
         <div className="relative px-6 py-4 rounded text-center">
           <h1 className="text-4xl md:text-8xl  font-[manrope] text-white">Comprehensive Logistics</h1>
-          <p className="mt-5 text-sm md:text-lg uppercase font-[manrope]"><span className="font-bold text-red-black">Air .</span>  <span className="font-bold text-red-black">Sea .</span>  <span className="font-bold text-red-black">Road .</span>  <span className="font-bold text-red-black">Rail .</span>  <span className="font-bold text-red-black">Warehousing .</span>  <span className="font-bold text-red-black">Customs .</span>  <span className="font-bold text-red-black">Couriers</span></p>
+          <p className="mt-5 text-sm md:text-lg uppercase font-[manrope]"><span className="font-bold text-red-black">Air .</span>  <span className="font-bold text-red-black">Sea .</span>  <span className="font-bold text-red-black">Express .</span>  <span className="font-bold text-red-black">Customs .</span>  <span className="font-bold text-red-black">Commercial .</span>  <span className="font-bold text-red-black">Personal</span></p>
         </div>
       </section>
 

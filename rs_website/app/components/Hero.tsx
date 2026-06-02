@@ -59,8 +59,8 @@ export default function Hero() {
         Routes Worldwide Express
       </p>
 
-      <h1 className="hero-item text-4xl tracking-tight font-[manrope] sm:text-5xl lg:text-7xl">
-        Seamless Global Shipping Made Simple.
+      <h1 className="hero-item text-4xl tracking-tight font-[manrope] sm:text-5xl lg:text-5xl">
+         From Origin to Final Destination - We Handle Every Step
       </h1>
 
       <p className="hero-item mx-auto max-w-2xl text-lg leading-8 sm:text-xl">

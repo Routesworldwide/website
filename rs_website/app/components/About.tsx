@@ -114,7 +114,7 @@ export default function AboutPage() {
                 Who We Are
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold font-[manrope] leading-tight text-[#071426] sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#071426] sm:text-4xl">
                 Modern Logistics Built For Global Businesses
               </h2>
 

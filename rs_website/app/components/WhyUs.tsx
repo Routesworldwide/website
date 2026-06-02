@@ -1,50 +1,35 @@
 "use client";
 
+import { Zap, Globe, FileCheck, Headphones } from "lucide-react";
+
 const reasons = [
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
-      </svg>
-    ),
+    icon: <Zap className="w-6 h-6" />,
     color: "from-violet-500 to-purple-600",
     delay: "0s",
-    title: "Premium Quality",
-    desc: "Every shipment is handled with meticulous care and industry-leading standards, ensuring your cargo arrives in perfect condition.",
+    title: "Fast Delivery",
+    desc: "We prioritize speed and reliability, ensuring your shipments are delivered on time through optimized routes, efficient handling, and a trusted global transportation network.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="12 6 12 12 16 14" />
-      </svg>
-    ),
+    icon: <Globe className="w-6 h-6" />,
     color: "from-blue-400 to-blue-600",
     delay: "0.15s",
-    title: "On-Time Delivery",
-    desc: "We understand that time is money. Our optimised routes and real-time tracking guarantee punctual deliveries, every time.",
+    title: "Global Network",
+    desc: "Our extensive international network connects businesses and individuals across multiple countries, providing seamless shipping solutions and dependable worldwide logistics support.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-      </svg>
-    ),
-    color: "from-teal-400 to-cyan-500",
+    icon: <FileCheck className="w-6 h-6" />,
+    color: "from-teal-400 to-cyan-5",
     delay: "0.3s",
-    title: "24/7 Support",
-    desc: "Our dedicated support team is available around the clock to answer questions and resolve any issues that may arise.",
+    title: "Customs Expertise",
+    desc: "Our customs specialists manage documentation, compliance requirements, and clearance procedures efficiently, helping prevent delays and ensuring smooth cross-border shipments.",
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
-      </svg>
-    ),
+    icon: <Headphones className="w-6 h-6" />,
     color: "from-slate-400 to-slate-500",
     delay: "0.45s",
-    title: "Customer First",
-    desc: "Your satisfaction drives every decision we make. We build long-term partnerships rooted in trust, transparency, and reliability.",
+    title: "Dedicated Support",
+    desc: "Our dedicated support team is available to assist with tracking, documentation, shipping inquiries, and logistics solutions throughout your shipment journey.",
   },
 ];
 

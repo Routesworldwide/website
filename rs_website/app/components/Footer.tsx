@@ -43,7 +43,7 @@ export default function Footer() {
         >
 
           {/* MAIN GRID */}
-          <div className="grid gap-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div className="grid gap-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
 
             {/* LEFT CONTENT */}
             <div className="max-w-sm">
@@ -106,32 +106,38 @@ export default function Footer() {
               <ul className="mt-8 space-y-5 text-gray-400">
 
                 <li>
-                  <a href="#" className="transition hover:text-white">
+                  <a href="/services" className="transition hover:text-white">
                     Air Freight
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="transition hover:text-white">
-                    Ocean Freight
+                  <a href="/services" className="transition hover:text-white">
+                    Sea Freight
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="transition hover:text-white">
-                    Road Transport
+                  <a href="/services" className="transition hover:text-white">
+                    Express Courier
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="transition hover:text-white">
-                    Warehousing
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="transition hover:text-white">
+                  <a href="/services" className="transition hover:text-white">
                     Customs Clearance
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/services" className="transition hover:text-white">
+                    Commercial Cargo
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/services" className="transition hover:text-white">
+                    Personal Shipments
                   </a>
                 </li>
 
@@ -141,7 +147,7 @@ export default function Footer() {
             {/* COMPANY */}
             <div>
               <h3 className="text-lg font-semibold text-white">
-                Company
+                Quick Links
               </h3>
 
               <ul className="mt-8 space-y-5 text-gray-400">
@@ -152,15 +158,12 @@ export default function Footer() {
                   </a>
                 </li>
 
-             
-
-              
-
                 <li>
-                  <a href="/blog" className="transition hover:text-white">
-                    Blog
+                  <a href="/track" className="transition hover:text-white">
+                    Track Shipment
                   </a>
                 </li>
+
 
                 <li>
                   <a href="/contact" className="transition hover:text-white">
@@ -171,10 +174,57 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* CONTACT */}
+            {/* COUNTRIES SERVED */}
             <div>
               <h3 className="text-lg font-semibold text-white">
-                Contact
+                Countries Served
+              </h3>
+
+              <ul className="mt-8 space-y-5 text-gray-400">
+
+                <li>
+                  <a href="#" className="transition hover:text-white">
+                    India
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" className="transition hover:text-white">
+                    United States
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" className="transition hover:text-white">
+                    United Kingdom
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" className="transition hover:text-white">
+                    Germany
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" className="transition hover:text-white">
+                    France
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" className="transition hover:text-white">
+                    Australia
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+            {/* CONTACT DETAILS */}
+            <div>
+              <h3 className="text-lg font-semibold text-white">
+                Contact Details
               </h3>
 
               <div className="mt-8 space-y-6 text-gray-400">
@@ -184,7 +234,7 @@ export default function Footer() {
                     Address
                   </p>
 
-                  <p className="mt-3 leading-7">
+                  <p className="mt-3 leading-7 text-sm">
                     Office 1016/2 Beegreen Plaza, Mahipalpur,
                     New Delhi - 110037
                   </p>
@@ -197,7 +247,7 @@ export default function Footer() {
 
                   <a
                     href="tel:+918796200495"
-                    className="mt-3 block transition hover:text-white"
+                    className="mt-3 block transition hover:text-white text-sm"
                   >
                     +91 8796200495
                   </a>
@@ -210,7 +260,7 @@ export default function Footer() {
 
                   <a
                     href="mailto:routesworldwide@gmail.com"
-                    className="mt-3 block transition hover:text-white"
+                    className="mt-3 block transition hover:text-white text-sm"
                   >
                     routesworldwideexpress@gmail.com
                   </a>

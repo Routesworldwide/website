@@ -308,7 +308,7 @@ export default function ContactPage() {
       <section className="py-16 px-6 sm:px-8 bg-neutral-100">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4 font-[manrope]">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4 ">
               Visit Our Headquarters
             </h2>
             <p className="text-neutral-600 text-lg">

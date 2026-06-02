@@ -22,11 +22,11 @@ export default function HowToGetStarted() {
   return (
     <section className="py-16 sm:py-20 bg-slate-100">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
-        <div className="mx-auto mb-12 max-w-3xl text-center">
+        <div className="mx-auto mb-12 max-w-5xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#c8102e]">
             Getting started
           </p>
-          <h2 className=" text-3xl md:mt-12 mt-4 mb-4 font-semibold  font-[manrope] text-slate-950 sm:text-5xl">
+          <h2 className=" text-3xl md:mt-12 mt-4 mb-4 font-semibold text-slate-950 sm:text-5xl">
             How to launch your first shipment ?
           </h2>
           <p className=" text-base leading-7 text-slate-600 sm:text-lg">
