@@ -61,7 +61,7 @@ export default function AboutPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://pixabay.com/images/download/druckfuchs-container-789488_1920.jpg')",
+              "url('/aboutbg.png')",
           }}
         />
 

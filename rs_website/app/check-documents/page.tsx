@@ -122,7 +122,7 @@ export default function CheckDocumentsPage() {
   );
 
   return (
-    <main style={{ background: "#f5f6f8", fontFamily: "'DM Sans', sans-serif" }}>
+    <main style={{ background: "#f5f6f8", fontFamily: "'DM Sans', sans-serif", overflowX: "hidden" }}>
       <style>{`
    
 
@@ -147,6 +147,7 @@ export default function CheckDocumentsPage() {
         .hero-content {
           position: relative;
           z-index: 2;
+          width: 100%;
           max-width: 880px;
           padding: 0 1.5rem;
         }
@@ -658,6 +659,11 @@ export default function CheckDocumentsPage() {
 
         /* responsive util */
         @media (max-width: 600px) {
+          .hero h1 {
+            font-size: clamp(3rem, 14vw, 4.25rem);
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+          }
           .form-card-top, .form-body, .results-header, .results-body { padding-left: 1.25rem; padding-right: 1.25rem; }
           .form-route { margin-left: 1.25rem; }
         }
