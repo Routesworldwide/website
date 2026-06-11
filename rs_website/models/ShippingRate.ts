@@ -4,10 +4,8 @@ export interface IShippingRate extends Document {
   origin: string;
   destination: string;
   airRate: number;
-  seaRate: number;
   expressRate: number;
   airTransit: string;
-  seaTransit: string;
   expressTransit: string;
   documents: string[];
   isActive: boolean;
@@ -36,21 +34,12 @@ const ShippingRateSchema = new Schema<IShippingRate>(
       required: true,
       min: 0,
     },
-    seaRate: {
-      type: Number,
-      required: true,
-      min: 0,
-    },
     expressRate: {
       type: Number,
       required: true,
       min: 0,
     },
     airTransit: {
-      type: String,
-      required: true,
-    },
-    seaTransit: {
       type: String,
       required: true,
     },

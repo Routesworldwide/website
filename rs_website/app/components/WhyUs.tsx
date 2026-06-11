@@ -38,10 +38,21 @@ export default function WhyChooseUs() {
     <section className="relative bg-white overflow-hidden py-24 px-6 lg:px-16 font-sans">
 
       {/* Large decorative circle background */}
-      <div
-        className="absolute left-[28%] top-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full bg-gray-100/80 pointer-events-none"
-        style={{ zIndex: 0 }}
-      />
+      {/* Animated Background Circles */}
+<div
+  className="absolute left-[28%] top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-gray-100/80 pointer-events-none animate-circle-one"
+  style={{ zIndex: 0 }}
+/>
+
+<div
+  className="absolute left-[30%] top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-gray-200/50 blur-sm pointer-events-none animate-circle-two"
+  style={{ zIndex: 0 }}
+/>
+
+<div
+  className="absolute left-[29%] top-1/2 h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-white/40 blur-md pointer-events-none animate-circle-three"
+  style={{ zIndex: 0 }}
+/>
 
       <div className="relative z-10 mx-auto max-w-6xl flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
 

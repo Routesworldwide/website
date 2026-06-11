@@ -3,6 +3,30 @@
 import { Mail, Phone, MapPin, Clock, Send, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
+
+const socialLinks = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/share/1BFtM96YUQ/?mibextid=wwXIfr",
+    icon: "/icons/facebook.png",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/routesworldwide/",
+    icon: "/icons/social.png",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/routesworldwide-express-ab1854411?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    icon: "/icons/linkedin.png",
+  },
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/918796200495?text=Hello%20Routes%20Worldwide%20Express",
+    icon: "/icons/whatsapp.png",
+  },
+];
+
 const contactInfo = [
   {
     icon: Phone,
@@ -13,7 +37,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "routesworldwideexpress@gmail.com",
+    value: "info@routesworldwideexpress.com",
     description: "We'll respond within 24 hours",
   },
   {
@@ -115,10 +139,23 @@ export default function ContactPage() {
             <h1 className="text-4xl sm:text-8xl  mb-6 font-[manrope] text-white">
               Get in Touch
             </h1>
-            <p className="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto">
               Have questions about our logistics solutions? We're here to help.
               Reach out to our team and we'll get back to you as soon as possible.
             </p>
+            <div className="flex justify-center space-x-4 mt-8">
+              {socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white bg-white/30 p-2 rounded-full  hover:text-blue-500 transition-colors duration-300"
+                >
+                  <img src={link.icon} alt={link.name} className="h-6 w-6" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>

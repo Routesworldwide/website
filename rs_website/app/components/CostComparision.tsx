@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import {
   Plane,
-  Ship,
   Package,
   TrendingUp,
   Clock3,
@@ -21,13 +20,6 @@ export default function ShipmentComparison() {
         rate: 450,
         transit: "5 - 10 Days",
         color: "bg-blue-50 border-blue-200",
-      },
-      {
-        name: "Sea Freight",
-        icon: Ship,
-        rate: 120,
-        transit: "18 - 30 Days",
-        color: "bg-slate-50 border-slate-200",
       },
       {
         name: "Express Courier",
@@ -58,7 +50,7 @@ export default function ShipmentComparison() {
 
           <p className="mt-5 text-slate-600">
             Compare transit times and estimated costs across
-            Air Freight, Sea Freight and Express Courier services.
+            Air Freight and Express Courier services.
           </p>
         </div>
 
@@ -85,7 +77,7 @@ export default function ShipmentComparison() {
         </div>
 
         {/* Comparison Cards */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
           {options.map((option) => {
             const Icon = option.icon;
             const total = option.rate * weight;
@@ -154,9 +146,9 @@ export default function ShipmentComparison() {
               </h3>
 
               <p className="text-slate-300 mt-1">
-                Sea Freight offers the lowest shipping cost for
-                {` ${weight} KG`} shipments, while Express Courier
-                provides the fastest delivery.
+                Air Freight offers balanced international cargo pricing for
+                {` ${weight} KG`} shipments, while Express Courier provides the
+                fastest delivery.
               </p>
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const socialLinks = [
@@ -49,7 +50,7 @@ export default function Footer() {
             <div className="max-w-sm">
 
               {/* LOGO */}
-              <a href="/" className="flex items-center gap-3">
+              <Link href="/" className="flex items-center gap-3">
                 <div className="relative h-12 w-12 overflow-hidden rounded-2xl">
                   <Image
                     src="/logo.png"
@@ -67,7 +68,7 @@ export default function Footer() {
                     Worldwide Express
                   </p>
                 </div>
-              </a>
+              </Link>
 
               {/* DESCRIPTION */}
               <p className="mt-8 text-base leading-8 text-gray-400">
@@ -108,12 +109,6 @@ export default function Footer() {
                 <li>
                   <a href="/services" className="transition hover:text-white">
                     Air Freight
-                  </a>
-                </li>
-
-                <li>
-                  <a href="/services" className="transition hover:text-white">
-                    Sea Freight
                   </a>
                 </li>
 
@@ -262,7 +257,7 @@ export default function Footer() {
                     href="mailto:routesworldwide@gmail.com"
                     className="mt-3 block transition hover:text-white text-sm"
                   >
-                    routesworldwideexpress@gmail.com
+                    info@routesworldwideexpress.com
                   </a>
                 </div>
 

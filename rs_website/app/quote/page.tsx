@@ -1,11 +1,10 @@
 "use client";
 
-import { Mail, Phone, MapPin, Send, ArrowRight, Plane, Ship, Train, Truck, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, Plane, Train, Truck, Globe } from "lucide-react";
 import { useState } from "react";
 
 const shippingTypes = [
     { id: "air", label: "Air Freight", icon: Plane },
-    { id: "ocean", label: "Ocean Freight", icon: Ship },
     { id: "rail", label: "Rail Freight", icon: Train },
     { id: "road", label: "Road Freight", icon: Truck },
     { id: "courier", label: "International Courier", icon: Globe },
@@ -189,7 +188,7 @@ export default function QuotePage() {
 
                                         <div className="flex items-center gap-3 text-white break-all">
                                             <Mail className="w-4 h-4 text-blue-100 flex-shrink-0" />
-                                            <span>routesworldwideexpress@gmail.com</span>
+                                            <span>info@routesworldwideexpress.com</span>
                                         </div>
 
                                         <div className="flex items-center gap-3 text-white">
@@ -202,7 +201,7 @@ export default function QuotePage() {
                         </div>
 
                         {/* Right Side - Form */}
-                        <div className="lg:col-span-2  px-10 rounded-lg">
+                        <div className="lg:col-span-2  px-4 md:px-10 rounded-lg">
                             <h3 className="text-3xl  text-black mb-2 font-[manrope]">
                                 Request a Quote
                             </h3>
@@ -431,7 +430,7 @@ export default function QuotePage() {
 
                                 {submitted && (
                                     <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded text-sm">
-                                        Thank you! Your quote request has been submitted. We'll get back to you shortly.
+                                        Thank you! Your quote request has been submitted. We&apos;ll get back to you shortly.
                                     </div>
                                 )}
 

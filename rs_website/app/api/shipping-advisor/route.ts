@@ -170,16 +170,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       });
     }
 
-    // Sea freight - usually cheapest, least urgent
-    if (extracted.urgency !== 'high') {
-      comparison.push({
-        method: 'Sea Freight',
-        costPerKg: shippingRates.seaRate,
-        totalCost: extracted.weightKg * shippingRates.seaRate,
-        transitTime: shippingRates.seaTransit,
-      });
-    }
-
     // Express courier - balanced option
     comparison.push({
       method: 'Express Courier',

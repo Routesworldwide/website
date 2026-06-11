@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 const services = [
   { img: "/icons/air-freight.png", bg: "#E8F1FF" },
   { img: "/icons/plane.png", bg: "#FFF4E5" },
-  { img: "/icons/shipping.png", bg: "#E9FFF3" },
   { img: "/icons/train.png", bg: "#F3E8FF" },
   { img: "/icons/delivery.png", bg: "#FFE8EF" },
 ];

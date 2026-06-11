@@ -1,14 +1,10 @@
 import React from "react";
-import { Plane, Ship, FileCheck, Truck, Folder } from "lucide-react";
+import { Plane, FileCheck, Truck, Folder } from "lucide-react";
 
 const SERVICES = [
   {
     icon: Plane,
     title: "Air Freight",
-  },
-  {
-    icon: Ship,
-    title: "Sea Freight",
   },
   {
     icon: FileCheck,
@@ -29,7 +25,7 @@ export default function FeaturedServices() {
     <section className="relative overflow-hidden bg-white py-10 md:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="overflow-x-auto rounded-xl  p-3">
-          <div className="flex min-w-max md:min-w-0 md:grid md:grid-cols-5 gap-3 bg-blue-950">
+          <div className="flex min-w-max md:min-w-0 md:grid md:grid-cols-4 gap-3 bg-blue-950">
             {SERVICES.map((service, index) => {
               const IconComponent = service.icon;
 

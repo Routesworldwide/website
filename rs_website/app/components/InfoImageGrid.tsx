@@ -50,7 +50,7 @@ export default function InfoImageGrid() {
                 <CheckIcon />
                 <div>
                   <h4 className="font-semibold text-slate-950 text-base">Global Corridors</h4>
-                  <p className="text-sm text-slate-600 mt-0.5">Seamless multimodal handoffs across air, land, and ocean hubs worldwide.</p>
+                  <p className="text-sm text-slate-600 mt-0.5">Coordinated handoffs across air and land corridors worldwide.</p>
                 </div>
               </li>
             </ul>

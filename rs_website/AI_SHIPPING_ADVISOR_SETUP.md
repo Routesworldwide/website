@@ -7,7 +7,7 @@ This is an AI-powered shipping advisor that uses OpenAI to understand natural la
 
 ### 1. **Models** (`models/ShippingRate.ts`)
 - Mongoose schema for shipping rates
-- Fields: origin, destination, airRate, seaRate, expressRate, transit times, documents, isActive
+- Fields: origin, destination, airRate, expressRate, transit times, documents, isActive
 - Compound index on origin + destination + isActive for optimal query performance
 
 ### 2. **Database Connection** (`lib/db.ts`)
@@ -23,7 +23,7 @@ This is an AI-powered shipping advisor that uses OpenAI to understand natural la
   4. Calculates costs based on urgency preference:
      - **High urgency:** Shows Air Freight options (fastest)
      - **Medium urgency:** Shows Express Courier options (balanced)
-     - **Low urgency:** Shows Sea Freight options (cheapest)
+     - **Low urgency:** Shows the lowest-cost available option
   5. Returns best method + full comparison with all available options
   6. **Important:** Prices only come from MongoDB, never invented by AI
 
@@ -79,24 +79,20 @@ db.shippingrates.insertMany([
     origin: "Delhi",
     destination: "Dubai",
     airRate: 250,
-    seaRate: 50,
     expressRate: 150,
     airTransit: "2-3 days",
-    seaTransit: "25-30 days",
     expressTransit: "7-10 days",
-    documents: ["Invoice", "Packing List", "Bill of Lading", "Certificate of Origin"],
+    documents: ["Invoice", "Packing List", "Certificate of Origin"],
     isActive: true
   },
   {
     origin: "Mumbai",
     destination: "Singapore",
     airRate: 280,
-    seaRate: 60,
     expressRate: 170,
     airTransit: "1-2 days",
-    seaTransit: "15-20 days",
     expressTransit: "5-7 days",
-    documents: ["Invoice", "Packing List", "Bill of Lading"],
+    documents: ["Invoice", "Packing List"],
     isActive: true
   },
   // Add more routes as needed
@@ -120,7 +116,7 @@ curl -X POST http://localhost:3000/api/shipping-advisor \
   "bestShippingMethod": "Express Courier",
   "estimatedCost": 3000,
   "transitTime": "7-10 days",
-  "requiredDocuments": ["Invoice", "Packing List", "Bill of Lading"],
+  "requiredDocuments": ["Invoice", "Packing List", "Certificate of Origin"],
   "comparison": [
     {
       "method": "Air Freight",
@@ -133,12 +129,6 @@ curl -X POST http://localhost:3000/api/shipping-advisor \
       "costPerKg": 150,
       "totalCost": 3000,
       "transitTime": "7-10 days"
-    },
-    {
-      "method": "Sea Freight",
-      "costPerKg": 50,
-      "totalCost": 1000,
-      "transitTime": "25-30 days"
     }
   ]
 }
@@ -197,7 +187,7 @@ curl -X POST http://localhost:3000/api/shipping-advisor \
 3. **Urgency Mapping:**
    - **high:** Prioritizes speed over cost (Air Freight)
    - **medium:** Balanced option (Express Courier)
-   - **low:** Prioritizes cost over speed (Sea Freight)
+   - **low:** Prioritizes cost over speed using available options
 
 4. **Error Handling:** If a route isn't found in the database, users are directed to contact the team for custom quotes.
 

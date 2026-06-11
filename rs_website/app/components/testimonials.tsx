@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+
 const testimonials = [
   {
     quote:
@@ -86,7 +88,7 @@ const testimonials = [
 function Avatar({ initials, bg }: { initials: string; bg: string }) {
   return (
     <div
-      className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0"
+      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
       style={{ background: bg }}
     >
       {initials}
@@ -110,30 +112,83 @@ export default function TestimonialsSection() {
   const large = testimonials.filter((t) => t.size === "large");
   const small = testimonials.filter((t) => t.size === "small");
 
-  return (
-    <section className="bg-white py-20 px-6 lg:px-16 font-sans">
-      <div className="mx-auto max-w-6xl space-y-5">
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(section);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="bg-white px-6 py-20 font-sans lg:px-16"
+    >
+      <div className="mx-auto max-w-6xl space-y-5">
         {/* Row 1 — two large cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {large.map((t, i) => (
             <div
               key={i}
-              className="rounded-3xl p-8 flex flex-col justify-between min-h-[260px]"
+              className="flex min-h-[260px] flex-col justify-between rounded-3xl p-8"
               style={{ background: t.bg }}
             >
               <div>
-                <QuoteIcon color={t.quoteColor} />
-                <p className="mt-5 text-lg leading-relaxed font-medium" style={{ color: t.textColor }}>
+                <div
+                  className={`transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+                    visible
+                      ? "scale-100 rotate-0 opacity-100"
+                      : "scale-0 -rotate-45 opacity-0"
+                  }`}
+                  style={{ transitionDelay: `${i * 150}ms` }}
+                >
+                  <QuoteIcon color={t.quoteColor} />
+                </div>
+
+                <p
+                  className="mt-5 text-lg font-medium leading-relaxed"
+                  style={{ color: t.textColor }}
+                >
                   {t.quote}
                 </p>
               </div>
+
               <div className="mt-8 flex items-center gap-4">
                 <Avatar initials={t.avatar} bg={t.avatarBg} />
+
                 <div>
-                  <p className="font-bold text-sm" style={{ color: t.nameColor }}>{t.name}</p>
-                  <p className="text-xs mt-0.5" style={{ color: t.roleColor }}>{t.role}</p>
-                  <p className="text-sm font-bold mt-1" style={{ color: t.companyColor }}>{t.company}</p>
+                  <p
+                    className="text-sm font-bold"
+                    style={{ color: t.nameColor }}
+                  >
+                    {t.name}
+                  </p>
+
+                  <p className="mt-0.5 text-xs" style={{ color: t.roleColor }}>
+                    {t.role}
+                  </p>
+
+                  <p
+                    className="mt-1 text-sm font-bold"
+                    style={{ color: t.companyColor }}
+                  >
+                    {t.company}
+                  </p>
                 </div>
               </div>
             </div>
@@ -141,31 +196,59 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Row 2 — three small cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {small.map((t, i) => (
             <div
               key={i}
-              className="rounded-3xl p-7 flex flex-col justify-between min-h-[280px]"
+              className="flex min-h-[280px] flex-col justify-between rounded-3xl p-7"
               style={{ background: t.bg }}
             >
               <div>
-                <QuoteIcon color={t.quoteColor} />
-                <p className="mt-4 text-base leading-relaxed font-medium" style={{ color: t.textColor }}>
+                <div
+                  className={`transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+                    visible
+                      ? "scale-100 rotate-0 opacity-100"
+                      : "scale-0 -rotate-45 opacity-0"
+                  }`}
+                  style={{ transitionDelay: `${(i + large.length) * 150}ms` }}
+                >
+                  <QuoteIcon color={t.quoteColor} />
+                </div>
+
+                <p
+                  className="mt-4 text-base font-medium leading-relaxed"
+                  style={{ color: t.textColor }}
+                >
                   {t.quote}
                 </p>
               </div>
+
               <div className="mt-6 flex items-center gap-3">
                 <Avatar initials={t.avatar} bg={t.avatarBg} />
+
                 <div>
-                  <p className="font-bold text-sm" style={{ color: t.nameColor }}>{t.name}</p>
-                  <p className="text-xs mt-0.5" style={{ color: t.roleColor }}>{t.role}</p>
-                  <p className="text-sm font-bold mt-1" style={{ color: t.companyColor }}>{t.company}</p>
+                  <p
+                    className="text-sm font-bold"
+                    style={{ color: t.nameColor }}
+                  >
+                    {t.name}
+                  </p>
+
+                  <p className="mt-0.5 text-xs" style={{ color: t.roleColor }}>
+                    {t.role}
+                  </p>
+
+                  <p
+                    className="mt-1 text-sm font-bold"
+                    style={{ color: t.companyColor }}
+                  >
+                    {t.company}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

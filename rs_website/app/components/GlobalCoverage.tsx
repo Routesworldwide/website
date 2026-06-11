@@ -33,7 +33,7 @@ const routes = countries
   .filter((country) => country.id !== "india")
   .map((country) => ["india", country.id]);
 
-const services = ["Air Freight", "Sea Freight", "Express Courier", "Customs Clearance"];
+const services = ["Air Freight", "Express Courier", "Customs Clearance"];
 
 function getCountry(id: string) {
   return countries.find((country) => country.id === id);
@@ -45,10 +45,8 @@ function createCurve(from: Country, to: Country) {
   return `M ${from.x} ${from.y} Q ${midX} ${midY} ${to.x} ${to.y}`;
 }
 
-export default function GlobalCoverageMap() {
-  const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
-
-  const SelectedCard = () => (
+function SelectedCard({ selectedCountry }: { selectedCountry: Country }) {
+  return (
     <div className="rounded bg-[#050505] p-4 shadow-xl md:p-5">
       <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#ef4444] md:text-xs">
         Selected Country
@@ -77,6 +75,10 @@ export default function GlobalCoverageMap() {
       </div>
     </div>
   );
+}
+
+export default function GlobalCoverageMap() {
+  const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
 
   return (
     <section className="bg-white py-14 md:py-24">
@@ -195,13 +197,13 @@ export default function GlobalCoverageMap() {
 
               {/* Desktop card */}
               <div className="absolute bottom-8 left-8 z-30 hidden w-full max-w-sm md:block">
-                <SelectedCard />
+                <SelectedCard selectedCountry={selectedCountry} />
               </div>
             </div>
 
             {/* Mobile card below map */}
             <div className="block p-4 md:hidden">
-              <SelectedCard />
+              <SelectedCard selectedCountry={selectedCountry} />
             </div>
           </div>
         </div>

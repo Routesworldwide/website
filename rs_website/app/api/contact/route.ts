@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
           <p>If you need immediate assistance, please contact us at:</p>
           <ul>
             <li><strong>Phone:</strong> 8796200495</li>
-            <li><strong>Email:</strong> routesworldwideexpress@gmail.com</li>
+            <li><strong>Email:</strong> info@routesworldwideexpress.com</li>
             <li><strong>Hours:</strong> Mon-Sun, 9AM-6PM EST</li>
           </ul>
           

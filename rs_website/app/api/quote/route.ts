@@ -158,7 +158,7 @@ export async function POST(request: NextRequest) {
           <p style="margin-top: 30px;">If you need immediate assistance, please contact us at:</p>
           <ul style="color: #374151; line-height: 1.8;">
             <li><strong>Phone:</strong> 8796200495</li>
-            <li><strong>Email:</strong> routesworldwideexpress@gmail.com</li>
+            <li><strong>Email:</strong> info@routesworldwideexpress.com</li>
             <li><strong>Hours:</strong> 24/7 Support Available</li>
           </ul>
           

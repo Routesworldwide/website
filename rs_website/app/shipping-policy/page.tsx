@@ -34,7 +34,6 @@ export default function ShippingPolicy() {
             </p>
             <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-6">
               <li><strong>Air Freight:</strong> Fast international shipping for urgent shipments (3-7 business days)</li>
-              <li><strong>Sea Freight:</strong> Economical option for large shipments (15-45 days)</li>
               <li><strong>Road Transport:</strong> Domestic and cross-border delivery (2-5 business days)</li>
               <li><strong>Rail Freight:</strong> Bulk cargo for long-distance transportation (7-14 days)</li>
               <li><strong>Express Courier:</strong> Quick delivery for urgent packages (1-3 business days)</li>

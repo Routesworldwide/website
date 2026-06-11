@@ -1,15 +1,22 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import {
-  ArrowRight,
   Plane,
-  Ship,
   Package,
   ShieldCheck,
   Factory,
   Home,
 } from "lucide-react";
 
-const services = [
+type Service = {
+  title: string;
+  description: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  image: string;
+};
+
+const services: Service[] = [
   {
     title: "Air Freight",
     description:
@@ -19,20 +26,11 @@ const services = [
       "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop",
   },
   {
-    title: "Sea Freight",
-    description:
-      "Cost-effective ocean freight services for bulk cargo, commercial goods, and international container shipments worldwide.",
-    icon: Ship,
-    image:
-      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
     title: "Express Courier",
     description:
       "Door-to-door express delivery for documents, parcels, and urgent shipments with real-time tracking and fast transit times.",
     icon: Package,
-    image:
-      "/courier.png",
+    image: "/courier.png",
   },
   {
     title: "Customs Clearance",
@@ -56,66 +54,141 @@ const services = [
       "Secure international shipping for personal belongings, gifts, household items, relocation cargo, and excess baggage.",
     icon: Home,
     image:
-      "https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1700716465891-9e5e9f501d7d?q=80&w=1193&auto=format&fit=crop",
   },
 ];
 
 export default function Services() {
+  const [headingVisible, setHeadingVisible] = useState(false);
+  const [firstRowVisible, setFirstRowVisible] = useState(false);
+  const [secondRowVisible, setSecondRowVisible] = useState(false);
+
+  const headingRef = useRef(null);
+  const firstRowRef = useRef(null);
+  const secondRowRef = useRef(null);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.25,
+      rootMargin: "0px 0px -80px 0px",
+    };
+
+    const headingObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setHeadingVisible(true);
+        headingObserver.disconnect();
+      }
+    }, observerOptions);
+
+    const firstRowObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setFirstRowVisible(true);
+        firstRowObserver.disconnect();
+      }
+    }, observerOptions);
+
+    const secondRowObserver = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setSecondRowVisible(true);
+        secondRowObserver.disconnect();
+      }
+    }, observerOptions);
+
+    if (headingRef.current) headingObserver.observe(headingRef.current);
+    if (firstRowRef.current) firstRowObserver.observe(firstRowRef.current);
+    if (secondRowRef.current) secondRowObserver.observe(secondRowRef.current);
+
+    return () => {
+      headingObserver.disconnect();
+      firstRowObserver.disconnect();
+      secondRowObserver.disconnect();
+    };
+  }, []);
+
+  const renderCard = (service: Service, index: number, isVisible: boolean) => {
+    const IconComponent = service.icon;
+
+    return (
+      <div
+        key={service.title}
+        style={{
+          transitionDelay: isVisible ? `${index * 150}ms` : "0ms",
+        }}
+        className={`group flex flex-col border border-slate-200 bg-white transition-all duration-700 ease-out hover:-translate-y-2 hover:border-[#c8102e] hover:shadow-xl ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+        }`}
+      >
+        <div className="relative h-60 w-full overflow-hidden bg-slate-200">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+
+          <div className="absolute inset-0 bg-[#071a33]/30 transition-colors duration-500 group-hover:bg-transparent" />
+        </div>
+
+        <div className="flex flex-1 flex-col p-8">
+          <div className="mb-6">
+            <div className="flex h-12 w-12 items-center justify-center border border-slate-900 bg-white transition-colors duration-300 group-hover:bg-[#c8102e]">
+              <IconComponent className="h-6 w-6 text-slate-900 transition-colors duration-300 group-hover:text-white" />
+            </div>
+          </div>
+
+          <h3 className="mb-3 text-xl font-bold tracking-tight text-slate-950">
+            {service.title}
+          </h3>
+
+          <p className="mb-8 flex-1 text-sm leading-relaxed text-slate-600">
+            {service.description}
+          </p>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <section className="py-24 px-6 bg-slate-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-16">
-          <span className="text-sm font-bold tracking-[0.2em] text-[#c8102e] uppercase mb-4 block border-l-4 border-[#c8102e] pl-4">
+    <section className="overflow-hidden bg-slate-50 px-6 py-24">
+      <div className="mx-auto max-w-7xl">
+        <div
+          ref={headingRef}
+          className={`mb-16 transition-all duration-700 ease-out ${
+            headingVisible
+              ? "translate-y-0 opacity-100"
+              : "translate-y-10 opacity-0"
+          }`}
+        >
+          <span className="mb-4 block border-l-4 border-[#c8102e] pl-4 text-sm font-bold uppercase tracking-[0.2em] text-[#c8102e]">
             Our Services
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-950 mt-2">
+          <h2 className="mt-2 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
             Complete logistics solutions for every shipment.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
+        {/* First 3 services */}
+        <div
+          ref={firstRowRef}
+          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+        >
+          {services
+            .slice(0, 3)
+            .map((service, index) =>
+              renderCard(service, index, firstRowVisible)
+            )}
+        </div>
 
-            return (
-              <div
-                key={index}
-                className="group flex flex-col bg-white border border-slate-200 hover:border-[#c8102e] transition-colors duration-300"
-              >
-                <div className="relative h-60 w-full overflow-hidden bg-slate-200">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-
-                  <div className="absolute inset-0 bg-[#071a33]/30 group-hover:bg-transparent transition-colors duration-500" />
-                </div>
-
-                <div className="p-8 flex flex-col flex-1">
-                  <div className="mb-6">
-                    <div className="w-12 h-12 border border-slate-900 flex items-center justify-center bg-white group-hover:bg-[#c8102e] transition-colors duration-300">
-                      <IconComponent className="w-6 h-6 text-slate-900 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-950 mb-3 tracking-tight">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-slate-600 leading-relaxed text-sm mb-8 flex-1">
-                    {service.description}
-                  </p>
-
-                  {/* <button className="flex items-center gap-2 text-sm font-bold uppercase tracking-[0.1em] text-[#c8102e] group-hover:gap-4 transition-all">
-                    <span>Learn more</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button> */}
-                </div>
-              </div>
-            );
-          })}
+        {/* Remaining services */}
+        <div
+          ref={secondRowRef}
+          className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+        >
+          {services
+            .slice(3)
+            .map((service, index) =>
+              renderCard(service, index, secondRowVisible)
+            )}
         </div>
       </div>
     </section>

@@ -70,12 +70,12 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex px-5 bg-white rounded-3xl py-1">
-          <a
+          {/* <a
             href="/customs-estimator"
             className="rounded-full  py-2 text-sm font-medium text-slate-700 transition "
           >
             Customs Estimator
-          </a>
+          </a> */}
 
           <a
             href="/check-documents"
@@ -137,18 +137,18 @@ export default function Header() {
               </a>
             ))}
 
-            <a
+            {/* <a
               href="/customs-estimator"
               className="text-sm font-medium text-slate-700 transition hover:text-[#0f2746]"
             >
               Customs Estimator
-            </a>
+            </a> */}
 
             <a
               href="/check-documents"
               className="text-sm font-medium text-slate-700 transition hover:text-[#0f2746]"
             >
-              aCheck Documents
+              Check Documents
             </a>
 
             <a
