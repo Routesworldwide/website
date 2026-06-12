@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const testimonials = [
   {
     quote:
-      "Having a reliable freight partner makes planning and managing logistics so much easier. If you want that full partnership experience, go with GlobalFreight.",
+      "Having a reliable freight partner makes planning and managing logistics so much easier. If you want that full partnership experience, go with Routes Worldwide Express.",
     name: "Manish Jain",
     role: "Operations Manager",
     company: "AspenTech",
@@ -37,7 +37,7 @@ const testimonials = [
   },
   {
     quote:
-      "GlobalFreight is simple, easy to work with, and gives us all the features we need. It just works.",
+      "Routes Worldwide Express is simple, easy to work with, and gives us all the features we need. It just works.",
     name: "Rohan Raj",
     role: "Senior Growth Manager",
     company: "Piano",
