@@ -15,8 +15,14 @@ export const metadata: Metadata = {
   description:
     "Professional logistics solutions for global transportation, warehousing, and freight management.",
   icons: {
-    icon: '/favicon.jpeg',
-    apple: '/favicon.jpeg',
+    icon: [
+      {
+        url: "/footer-favicon.png?v=2",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/favicon.ico?v=2",
+    apple: "/footer-favicon.png?v=2",
   },
 };
 
