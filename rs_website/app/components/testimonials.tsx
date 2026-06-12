@@ -6,7 +6,7 @@ const testimonials = [
   {
     quote:
       "Having a reliable freight partner makes planning and managing logistics so much easier. If you want that full partnership experience, go with Routes Worldwide Express.",
-    name: "Manish Jain",
+    name: "Rohit jain ",
     role: "Operations Manager",
     company: "AspenTech",
     avatar: "EO",
